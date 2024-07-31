@@ -1,0 +1,24 @@
+int op::transfer() asm "0xf8a7ea5 PUSHINT";
+int op::transfer_notification() asm "0x7362d09c PUSHINT";
+int op::internal_transfer() asm "0x178d4519 PUSHINT";
+int op::excesses() asm "0xd53276db PUSHINT";
+int op::burn() asm "0x595f07bc PUSHINT";
+int op::burn_notification() asm "0x7bdd97de PUSHINT";
+
+;; Minter
+int op::mint() asm "21 PUSHINT";
+
+const int op::deploy = 0x610ca46c;
+const int op::process_claim = 0x43c7d5c9;
+const int op::jetton::transfer = 0x0f8a7ea5;
+
+const int error::invliad_wc = 2;
+const int error::already_claimed = 702;
+const int error::wrong_sender = 703;
+const int error::not_enough_coins = 704;
+const int error::wrong_proof = 705;
+const int error::already_deployed = 706;
+const int error::invliad_amount = 10;
+
+const int const::min_balance = 50000000;
+const int const::fee = 50000000;
